@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nodos 2</title>
+    </head>
+    <body>
+        <h1 align="center">HOLAP</h1>
+        <ol id="lista">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, a cum dolores repellendus
+             eaque sequi cumque? Omnis cumque porro, placeat eos consequuntur blanditiis eveniet! </li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, a cum dolores repellendus
+             eaque sequi cumque? Omnis cumque porro, placeat eos consequuntur blanditiis eveniet! </li> 
+        </ol>
+        <input type="button" value="g" onclick="d()">
+<script>
+        function d(){
+            var elemento = document.createElement("li");
+            var padre = document.getElementsByTagName("li")[0].parentNode,//parentNode: dice cual es 
+                                                                          //el padre o contenedor del nodo obtenido
+
+            contenido = document.createTextNode("parrafo de js");
+            elemento.appendChild(contenido);
+
+            primerElemento = document.getElementsByTagName("li")[1];//El arreglo es para seleccionar el elemento del tipo ya definido
+            padre.insertBefore(elemento, primerElemento); /* el primer parametro
+             se inserta dentro del elemento definido pero antes del segundo parametro*/
+        }
+        //padre.appendChild(elemento);
+            //window.onload = d();
+        </script>
+    </body>
+</html>
