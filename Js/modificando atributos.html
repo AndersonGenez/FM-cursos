@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>17-Modificando Atributos</title>
+                <style>
+                    div{
+                        width: 200px;
+                        height: 200px;
+                        background: #dddddd;
+                        display: inline-block;
+                        margin-right: 10px;
+                        border: solid #AAAAAA;
+                    }
+                    .negro{
+                        border: 1px solid #000;
+                        background: black;
+                    }
+                    .verde{
+                        border: 1px solid #000;
+                        background: green;
+                    }
+                    .azul{
+                        border: 1px solid #000;
+                        background: blue;
+                    }
+                </style>
+
+                
+            </head>
+            <body>
+                <section id="contenedor">
+                    <div class=""></div>
+                    <div class="">
+                        <a href="http//www.falconmasters.com" id="enlace">FalconMasters</a>
+                    </div>
+                    <div class=""></div>
+                </section>
+                <script>
+                    bandera = true;
+                    var elemento = document.createElement("div");
+                    var padre = document.getElementById("contenedor");
+                    var referencia = document.getElementsByTagName("div")[2];
+                    padre.insertBefore(elemento, referencia);
+                    //elemento.setAttribute("class", "azul");
+                    h = document.getElementById("enlace");
+                    elemento.appendChild(h);
+
+                    ///////////////////////////
+                    //.setAttribute("class", "azul"); modifica cualquier atributo ej: size
+                    ///////////////////////////
+
+                    /*function cambio(){
+
+                        if (bandera){
+                        elemento.className = "rojo";
+                        bandera = false;
+                        document.getElementById("enlace").href = "platzi.com"
+                        document.getElementById("enlace").innerHTML = "Platzi";
+                        } else{
+                        elemento.className = "azul";
+                        bandera = true;
+                        document.getElementById("enlace").href = "falconmasters.com"
+                        document.getElementById("enlace").innerHTML = "FalconMasters";
+                    }
+                    }*/
+                    
+                    var key = 1;
+                    function numero() {
+                        key ++
+                        if (key >3){
+                            key = 1;
+                        } 
+                            return        key;
+                    }
+                        
+                        function gik(key){
+                    switch (key) {//meter el switch en una función para ejecutarla
+                        case 1:
+                        document.getElementById("enlace").href = "falconmasters.com"
+                        document.getElementById("enlace").innerHTML = "FalconMasters";
+                        elemento.setAttribute("class", "negro");
+                        console.log("1");
+                            break;
+                        case 2:
+                        document.getElementById("enlace").href = "platzi.com"
+                        document.getElementById("enlace").innerHTML = "Platzi";
+                        console.log("2");
+                        elemento.className = "verde";
+                            break;
+                        case 3:
+                        document.getElementById("enlace").href = "edteam.com"
+                        document.getElementById("enlace").innerHTML = "'<b>Edteam</b>'";
+                        elemento.className = "azul";
+                        console.log("3");
+                            break;
+
+            
+                    }}
+        
+                
+                   // console.log(papa);
+                </script>
+
+
+                <input type="button" value="atributos" onclick="numero(); gik(key);">
+            </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificar elementos</title>
+</head>
+<body>
+    <ol id="lista">
+        <li id="primero">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet assumenda atque voluptates 
+            cum error distinctio ipsa cupiditate aliquid quis nobis facere nisi harum, 
+            nam fugiat itaque doloremque perferendi1s quae dicta.
+        </li>
+         
+        <li> distinctio ipsa cupiditate aliquid quis nobis 
+        </li>
+
+        <li>error distinctio ipsa cupiditate aliquid quis nobis 
+            sa cupiditate aliquid quis nobi
+        </li>
+    </ol>
+
+    <script>
+            var primerElemento = document.getElementById("primero");
+            primerElemento.innerHTML = "<b>reemplazo <i>de</i> texto</b>";
+            
+            //Para reemplazar solo texto:
+            primerElemento.textContent = "reemplazo de texto";
+            
+            //Toma en cuenta TODOS los "li" del DOM:
+            var padre = document.getElementsByTagName("li")[0].parentNode;
+            //referencia = document.getElementsByTagName("li")[0];
+                          //  reemplazador/reemplazado:
+            //padre.replaceChild(padre, referencia);
+
+            //////////////////////
+            del = document.getElementsByTagName("li")[1];
+            padre.removeChild(del);
+            //Eliminar
+    </script>
+</body>
+</html>
